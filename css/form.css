@@ -1,0 +1,89 @@
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: lightgrey;
+    text-align: center;
+    margin-top: 160px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px slategray;
+}
+
+.form__fieldset {
+    border: 3px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.form__paragraph {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.form__table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.form__tableCell {
+    padding: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form__label {
+    font-weight: bold;
+    font-size: large;
+}
+
+.form__field {
+    width: 100px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow:inset 3px 3px 8px slategray;
+    text-shadow: 5px 5px 1px lightgrey;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.form__field--amount {
+    width: 200px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow:inset 3px 3px 8px slategray;
+    text-shadow: 5px 5px 1px lightgrey;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.form__button {
+    width: 100px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 8px slategray;
+}
+
+.form__button:active {
+    transform: translateY(3px);
+}
+
+.form__button:hover {
+    background-color: lightgrey;
+}
+
+.form__result {
+    margin-top: 45px;
+    font-size: xx-large;
+    font-weight: bold;
+}
