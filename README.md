@@ -20,7 +20,7 @@ My Homepage
 
 👇
 
-[Homepage](https://robfyd.github.io/homepage/)
+[Currency Converter](https://robfyd.github.io/currency-converter/)
 
 Below you can quickly use uncle google:
 
