@@ -22,36 +22,33 @@
     <form class="form js-form">
         <fieldset class="form__fieldset">
             <p class="form__paragraph">Currency Converter</p>
-            <table class="form__table">
-                <tr>
-                    <td class="form__tableCell">
-                        <label class="form__label">
-                            Currency From
-                            <select class="form__field js-currencyFrom" name="currencyFrom">
-                                <option value="gbp" selected>GBP</option>
-                                <option value="pln">PLN</option>
-                                <option value="eur">EUR</option>
-                            </select>
-                        </label>
-                    </td>
-                    <td class="form__tableCell">
-                        <label class="form__label">
-                            Currency To
-                            <select class="form__field js-currencyTo" name="currencyTo">
-                                <option value="gbp">GBP</option>
-                                <option value="pln" selected>PLN</option>
-                                <option value="eur">EUR</option>
-                            </select>
-                        </label>
-                    </td>
-                <tr>
-                    <th class="form__tableCell" scope="row" colspan="2">
-                        <label class="form__label">Amount* <input type="number" min="1"
-                                class="form__field--amount js-amount" required>
-                        </label>
-                    </th>
-                </tr>
-            </table>
+            <div class="form__container">
+                <div class="container__item">
+                    <label class="form__label">
+                        Currency From
+                        <select class="form__field js-currencyFrom" name="currencyFrom">
+                            <option value="gbp" selected>GBP</option>
+                            <option value="pln">PLN</option>
+                            <option value="eur">EUR</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="container__item">
+                    <label class="form__label">
+                        Currency To
+                        <select class="form__field js-currencyTo" name="currencyTo">
+                            <option value="gbp">GBP</option>
+                            <option value="pln" selected>PLN</option>
+                            <option value="eur">EUR</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="container__item">
+                    <label class="form__label">Amount* <input type="number" min="1"
+                            class="form__field--amount js-amount" required>
+                    </label>
+                </div>
+            </div>
             <p>
                 <button class="form__button">Convert</button>
             </p>

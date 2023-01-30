@@ -1,5 +1,5 @@
 .form {
-    max-width: 600px;
+    max-width: 540px;
     margin: 0 auto;
     background-color: lightgrey;
     text-align: center;
@@ -22,15 +22,19 @@
     margin-bottom: 30px;
 }
 
-.form__table {
-    border-collapse: collapse;
-    width: 100%;
+.form__container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.form__tableCell {
-    padding: 25px;
-    text-align: center;
-    vertical-align: middle;
+.container__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 5px;
+    align-self: center;
 }
 
 .form__label {
@@ -42,8 +46,8 @@
     width: 100px;
     background-color: whitesmoke;
     border: 1px solid black;
-    padding: 10px;
-    box-shadow:inset 3px 3px 8px slategray;
+    padding: 5px;
+    box-shadow: inset 3px 3px 8px slategray;
     text-shadow: 5px 5px 1px lightgrey;
     font-size: larger;
     font-weight: bold;
@@ -54,8 +58,8 @@
     width: 200px;
     background-color: whitesmoke;
     border: 1px solid black;
-    padding: 10px;
-    box-shadow:inset 3px 3px 8px slategray;
+    padding: 5px;
+    box-shadow: inset 3px 3px 8px slategray;
     text-shadow: 5px 5px 1px lightgrey;
     font-size: larger;
     font-weight: bold;
@@ -63,6 +67,7 @@
 }
 
 .form__button {
+    margin-top: 9px;
     width: 100px;
     background-color: whitesmoke;
     border: 1px solid black;
