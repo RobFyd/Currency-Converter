@@ -1,7 +1,7 @@
 .form {
     max-width: 540px;
     margin: 0 auto;
-    background-color: lightgrey;
+    background-color: #ffe1c7;
     text-align: center;
     margin-top: 160px;
     border-radius: 10px;
@@ -84,7 +84,8 @@
 }
 
 .form__button:hover {
-    background-color: lightgrey;
+    background-color: #ffe1c7;
+    box-shadow: 0px 0px 70px 20px #ffc144;
 }
 
 .form__result {
