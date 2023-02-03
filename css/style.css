@@ -13,4 +13,10 @@ html {
     margin: auto;
     padding: 15px;
     line-height: 1.6;
+    background-image: url("../images-bg/coins.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    resize: both;
+    overflow: auto;
+    background-size: auto 1300px;
 }
