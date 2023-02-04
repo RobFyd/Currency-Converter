@@ -85,7 +85,7 @@
 
 .form__button:hover {
     background-color: #ffe1c7;
-    box-shadow: 0px 0px 70px 20px #ffc144;
+    box-shadow: 0px 0px 40px 20px #ffc144;
 }
 
 .form__result {
