@@ -1,38 +1,69 @@
 {
-    const formElement = document.querySelector(".js-form");
-    const currencyFrom = document.querySelector(".js-currencyFrom");
-    const currencyTo = document.querySelector(".js-currencyTo");
-    const amount = document.querySelector(".js-amount");
-    const resultElement = document.querySelector(".js-result");
+    const getFormElements = () => {
+        return {
+            formElement: document.querySelector(".js-form"),
+            currencyFrom: document.querySelector(".js-currencyFrom"),
+            currencyTo: document.querySelector(".js-currencyTo"),
+            amount: document.querySelector(".js-amount"),
+            resultElement: document.querySelector(".js-result"),
+        };
+    };
 
-    const eur = 4.72;
-    const gbp = 5.40;
-    const pln = 1;
+    const calculateCurrency = (currencyFromValue, amountValue, exchangeRates) => {
+        let result;
+        switch (currencyFromValue) {
+            case "gbp":
+                result = amountValue * exchangeRates.gbp;
+                break;
+            case "pln":
+                result = amountValue * exchangeRates.pln;
+                break;
+            case "eur":
+                result = amountValue * exchangeRates.eur;
+                break;
+        }
+        return result;
+    };
 
-    formElement.addEventListener("submit", (event) => {
+    const convertCurrency = (result, currencyToValue, exchangeRates) => {
+        switch (currencyToValue) {
+            case "gbp":
+                result /= exchangeRates.gbp;
+                break;
+            case "pln":
+                result /= exchangeRates.pln;
+                break;
+            case "eur":
+                result /= exchangeRates.eur;
+                break;
+        }
+        return result;
+    };
+
+    const handleFormSubmit = (event, elements, exchangeRates) => {
         event.preventDefault();
-        switch (currencyFrom.value) {
-            case "gbp":
-                result = amount.value * gbp;
-                break;
-            case "pln":
-                result = amount.value * pln;
-                break;
-            case "eur":
-                result = amount.value * eur;
-                break;
-        }
-        switch (currencyTo.value) {
-            case "gbp":
-                result /= gbp;
-                break;
-            case "pln":
-                result /= pln;
-                break;
-            case "eur":
-                result /= eur;
-                break;
-        }
-        resultElement.innerText = result.toFixed(2);
-    });
+        let result = calculateCurrency(
+            elements.currencyFrom.value,
+            elements.amount.value,
+            exchangeRates
+        );
+        result = convertCurrency(
+            result,
+            elements.currencyTo.value,
+            exchangeRates
+        );
+        elements.resultElement.innerText = result.toFixed(2);
+    };
+
+    const exchangeRates = {
+        eur: 4.72,
+        gbp: 5.40,
+        pln: 1,
+    };
+
+    const elements = getFormElements();
+    elements.formElement.addEventListener("submit", (event) =>
+        handleFormSubmit(event, elements, exchangeRates)
+    );
 }
+
