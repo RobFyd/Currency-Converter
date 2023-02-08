@@ -10,16 +10,15 @@
 
 .form__fieldset {
     border: 3px solid black;
-    padding: 30px;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: auto;
 }
 
 .form__paragraph {
     font-size: 50px;
     font-weight: 700;
     margin-top: auto;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .form__container {
@@ -67,14 +66,14 @@
 }
 
 .form__button {
-    margin-top: 9px;
+    margin-top: 0px;
     width: 100px;
     background-color: whitesmoke;
     border: 1px solid black;
     font-size: larger;
     font-weight: bold;
     border-radius: 5px;
-    padding: 10px;
+    padding: 7px;
     text-align: center;
     box-shadow: 3px 3px 8px slategray;
 }
@@ -85,11 +84,12 @@
 
 .form__button:hover {
     background-color: #ffe1c7;
-    box-shadow: 0px 0px 40px 20px #ffc144;
+    box-shadow: 0px 0px 30px 20px #ffc144;
 }
 
 .form__result {
-    margin-top: 45px;
+    margin-top: 25px;
+    margin-bottom: 10px;
     font-size: xx-large;
     font-weight: bold;
 }
