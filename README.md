@@ -28,17 +28,6 @@ If you want to learn more and test the functionality of my converter, click belo
 
 [Currency Converter](https://robfyd.github.io/currency-converter/)
 
-Below you can quickly use uncle google:
-
-👇
-
-[Google](https://google.com)
-
-Or do you have a question for the omniscient chatGPT?
-
-👇
-
-[chatGPT](https://chat.openai.com)
 
 ```javascript
 let x = "love coding";
