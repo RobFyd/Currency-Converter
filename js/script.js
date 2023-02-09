@@ -1,8 +1,6 @@
 {
-    const currencyFrom = document.querySelector(".js-currencyFrom");
-    const amountElement = document.querySelector(".js-amount");
 
-    const firstCalculateResult = (currencyFrom, amountElement) => {
+    const getResult = (currencyFrom, amountElement) => {
         switch (currencyFrom.value) {
             case "gbp":
                 return amountElement.value * gbp;
@@ -19,27 +17,35 @@
     const gbp = 5.40;
     const pln = 1;
 
-    const formElement = document.querySelector(".js-form");
+    const init = () => {
 
-    formElement.addEventListener("submit", (event) => {
-        event.preventDefault();
+        const currencyFrom = document.querySelector(".js-currencyFrom");
+        const amountElement = document.querySelector(".js-amount");
+        const formElement = document.querySelector(".js-form");
 
-        const currencyTo = document.querySelector(".js-currencyTo");
-        const resultElement = document.querySelector(".js-result");
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
 
-        let result = firstCalculateResult(currencyFrom, amountElement);
+            const currencyTo = document.querySelector(".js-currencyTo");
+            const resultElement = document.querySelector(".js-result");
 
-        switch (currencyTo.value) {
-            case "gbp":
-                result /= gbp;
-                break;
-            case "pln":
-                result /= pln;
-                break;
-            case "eur":
-                result /= eur;
-                break;
-        }
-        resultElement.innerText = result.toFixed(2);
-    });
+            let result = getResult(currencyFrom, amountElement);
+
+            switch (currencyTo.value) {
+                case "gbp":
+                    result /= gbp;
+                    break;
+                case "pln":
+                    result /= pln;
+                    break;
+                case "eur":
+                    result /= eur;
+                    break;
+            }
+            resultElement.innerText = result.toFixed(2);
+        });
+    }
+
+    init();
+
 }
