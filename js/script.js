@@ -3,13 +3,13 @@
     const getResult = (currencyFrom, amountElement) => {
         switch (currencyFrom.value) {
             case "gbp":
-                return amountElement.value * gbp;
+                return +amountElement.value * gbp;
 
             case "pln":
-                return amountElement.value * pln;
+                return +amountElement.value * pln;
 
             case "eur":
-                return amountElement.value * eur;
+                return +amountElement.value * eur;
         }
     }
 
@@ -22,7 +22,7 @@
         const currencyFrom = document.querySelector(".js-currencyFrom");
         const amountElement = document.querySelector(".js-amount");
         const formElement = document.querySelector(".js-form");
-
+    
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
 
@@ -30,6 +30,7 @@
             const resultElement = document.querySelector(".js-result");
 
             let result = getResult(currencyFrom, amountElement);
+            let currency = currencyTo.value;
 
             switch (currencyTo.value) {
                 case "gbp":
@@ -42,7 +43,9 @@
                     result /= eur;
                     break;
             }
-            resultElement.innerText = result.toFixed(2);
+            resultElement.innerHTML = `${result.toFixed(2)} ${currency.toUpperCase()}`;
+
+
         });
     }
 
