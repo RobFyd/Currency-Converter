@@ -20,7 +20,7 @@ My first page contains:
 
 My logo:
 
-![LOGO](https://github.com/RobFyd/homepage/blob/main/images/RF.png?raw=true)
+![LOGO](https://github.com/RobFyd/BMI-Calculator/blob/main/fotos/RFLogo.png?raw=true)
 
 If you want to learn more and test the functionality of my converter, click below:
 
