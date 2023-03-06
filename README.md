@@ -9,7 +9,7 @@ This is my first tool for currency conversion. I created it as part of the "Fron
 
 ### Demo
 
-![Alt text](https://github.com/RobFyd/currency-converter/raw/main/gifs/converter.gif)
+![Alt text](https://github.com/RobFyd/currency-converter/blob/main/gifs/converterNewGif.gif?raw=true)
 
 My first page contains:
 - HTML
