@@ -1,11 +1,11 @@
 .form {
     max-width: 540px;
     margin: 0 auto;
-    background-color: #ffe1c7;
+    background-color: #e3d4c1;
     text-align: center;
     margin-top: 160px;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px 20px #ffc144;
+    box-shadow: 0px 0px 30px 30px #f9efc8;
 }
 
 .form__fieldset {
@@ -83,8 +83,8 @@
 }
 
 .form__button:hover {
-    background-color: #ffe1c7;
-    box-shadow: 0px 0px 30px 20px #ffc144;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 30px 20px #f9efc8;
 }
 
 .form__result {
