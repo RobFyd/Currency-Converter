@@ -26,7 +26,7 @@ If you want to learn more and test the functionality of my converter, click belo
 
 👇
 
-[Currency Converter](https://robfyd.github.io/currency-converter/)
+[Currency Converter](https://robfyd.github.io/Currency-Converter/)
 
 
 ```javascript
