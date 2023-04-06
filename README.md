@@ -5,7 +5,7 @@
 
 ### Description
 
-This is my first tool for currency conversion. I created it as part of the "Frontend developer od podstaw" course. Below is a demo of the project. The converter is still being improved.
+This is my first tool for currency conversion. I created it as part of the "Frontend developer from scratch" course. Below is a demo of the project. The converter is still being improved.
 
 ### Demo
 
