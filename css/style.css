@@ -16,7 +16,5 @@ html {
     background-image: url("../images-bg/coins.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    resize: both;
-    overflow: auto;
-    background-size: auto 1300px;
+    background-size: auto 1400px;
 }
