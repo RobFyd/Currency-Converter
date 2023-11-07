@@ -40,16 +40,16 @@
     return result;
   };
 
-  const updateResult = (result, currency) => {
-    resultElement.innerHTML = `${result.toFixed(2)} ${currency.toUpperCase()}`;
+  const updateResult = (result, currencyToValue) => {
+    resultElement.innerHTML = `${result.toFixed(2)} ${currencyToValue.toUpperCase()}`;
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const currencyFromValue = currencyFrom.value;
-    const amount = amountElement.value;
     const currencyToValue = currencyTo.value;
-
+    const amount = amountElement.value;
+    
     const result = calculateConversion(
       currencyFromValue,
       amount,
