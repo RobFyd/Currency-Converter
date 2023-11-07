@@ -1,54 +1,66 @@
 {
+  const currencyFrom = document.querySelector(".js-currencyFrom");
+  const amountElement = document.querySelector(".js-amount");
+  const formElement = document.querySelector(".js-form");
+  const currencyTo = document.querySelector(".js-currencyTo");
+  const resultElement = document.querySelector(".js-result");
 
-    const getResult = (currencyFrom, amountElement) => {
-        switch (currencyFrom.value) {
-            case "gbp":
-                return +amountElement.value * gbp;
+  const eur = 4.72;
+  const gbp = 5.4;
+  const pln = 1;
 
-            case "pln":
-                return +amountElement.value * pln;
-
-            case "eur":
-                return +amountElement.value * eur;
-        }
+  const calculateConversion = (currencyFromValue, amount, currencyToValue) => {
+    let conversionRate;
+    switch (currencyFromValue) {
+      case "gbp":
+        conversionRate = gbp;
+        break;
+      case "pln":
+        conversionRate = pln;
+        break;
+      case "eur":
+        conversionRate = eur;
+        break;
     }
 
-    const eur = 4.72;
-    const gbp = 5.40;
-    const pln = 1;
+    let result = +amount * conversionRate;
 
-    const init = () => {
-
-        const currencyFrom = document.querySelector(".js-currencyFrom");
-        const amountElement = document.querySelector(".js-amount");
-        const formElement = document.querySelector(".js-form");
-
-        formElement.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            const currencyTo = document.querySelector(".js-currencyTo");
-            const resultElement = document.querySelector(".js-result");
-
-            let result = getResult(currencyFrom, amountElement);
-            let currency = currencyTo.value;
-
-            switch (currencyTo.value) {
-                case "gbp":
-                    result /= gbp;
-                    break;
-                case "pln":
-                    result /= pln;
-                    break;
-                case "eur":
-                    result /= eur;
-                    break;
-            }
-            resultElement.innerHTML = `${result.toFixed(2)} ${currency.toUpperCase()}`;
-
-
-        });
+    switch (currencyToValue) {
+      case "gbp":
+        result /= gbp;
+        break;
+      case "pln":
+        result /= pln;
+        break;
+      case "eur":
+        result /= eur;
+        break;
     }
 
-    init();
+    return result;
+  };
 
+  const updateResult = (result, currency) => {
+    resultElement.innerHTML = `${result.toFixed(2)} ${currency.toUpperCase()}`;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const currencyFromValue = currencyFrom.value;
+    const amount = amountElement.value;
+    const currencyToValue = currencyTo.value;
+
+    const result = calculateConversion(
+      currencyFromValue,
+      amount,
+      currencyToValue
+    );
+    updateResult(result, currencyToValue);
+  };
+
+  const init = () => {
+    formElement.addEventListener("submit", handleSubmit);
+  };
+
+  init();
 }
