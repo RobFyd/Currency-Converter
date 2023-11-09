@@ -5,11 +5,11 @@
   const currencyTo = document.querySelector(".js-currencyTo");
   const resultElement = document.querySelector(".js-result");
 
-  const eur = 4.72;
-  const gbp = 5.4;
-  const pln = 1;
-
   const calculateConversion = (currencyFromValue, amount, currencyToValue) => {
+    const eur = 4.72;
+    const gbp = 5.4;
+    const pln = 1;
+
     let conversionRate;
     switch (currencyFromValue) {
       case "gbp":
@@ -24,7 +24,6 @@
     }
 
     let result = +amount * conversionRate;
-
     switch (currencyToValue) {
       case "gbp":
         result /= gbp;
@@ -49,7 +48,7 @@
     const currencyFromValue = currencyFrom.value;
     const currencyToValue = currencyTo.value;
     const amount = amountElement.value;
-    
+
     const result = calculateConversion(
       currencyFromValue,
       amount,
