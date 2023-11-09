@@ -1,61 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curency Converter</title>
-    <link rel="icon" href="images/RF.png">
-    <meta property="og:image" content="https://github.com/RobFyd/Currency-Converter/blob/main/images/share1.png?raw=true">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/form.css" rel="stylesheet">
+    <link rel="icon" href="images/RF.png" />
+    <meta
+      property="og:image"
+      content="https://github.com/RobFyd/Currency-Converter/blob/main/images/share1.png?raw=true"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
     <script defer src="js/script.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredoka+One&family=Lato:wght@400;700&family=Pacifico&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredoka+One&family=Lato:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="body">
+  <body class="body">
     <form class="form js-form">
-        <fieldset class="form__fieldset">
-            <p class="form__paragraph">Currency Converter</p>
-            <div class="form__container">
-                <div class="form__container--item">
-                    <label class="form__label">
-                        Currency From
-                        <select class="form__field js-currencyFrom" name="currencyFrom">
-                            <option value="gbp" selected>GBP</option>
-                            <option value="pln">PLN</option>
-                            <option value="eur">EUR</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="form__container--item">
-                    <label class="form__label">
-                        Currency To
-                        <select class="form__field js-currencyTo" name="currencyTo">
-                            <option value="gbp">GBP</option>
-                            <option value="pln" selected>PLN</option>
-                            <option value="eur">EUR</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="form__container--item">
-                    <label class="form__label">Amount* <input name="amount" type="number" min="1" step="any"
-                            class="form__field--amount js-amount" required />
-                    </label>
-                </div>
-            </div>
-            <p>
-                <button class="form__button">Convert</button>
-            </p>
-            <p class="form__result">Result: <strong class="js-result">N/A</strong></p>
-            <p>*The field with a star (*) symbol must be completed</p>
-        </fieldset>
+      <fieldset class="form__fieldset">
+        <p class="form__paragraph">Currency Converter</p>
+        <div class="form__container">
+          <div class="form__container--item">
+            <label class="form__label">
+              Currency From
+              <select class="form__field js-currencyFrom" name="currencyFrom">
+                <option value="gbp" selected>GBP</option>
+                <option value="pln">PLN</option>
+                <option value="eur">EUR</option>
+              </select>
+            </label>
+          </div>
+          <div class="form__container--item">
+            <label class="form__label">
+              Currency To
+              <select class="form__field js-currencyTo" name="currencyTo">
+                <option value="gbp">GBP</option>
+                <option value="pln" selected>PLN</option>
+                <option value="eur">EUR</option>
+              </select>
+            </label>
+          </div>
+          <div class="form__container--item">
+            <label class="form__label"
+              >Amount*
+              <input
+                name="amount"
+                type="number"
+                min="1"
+                step="any"
+                class="form__field--amount js-amount"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <p>
+          <button class="form__button">Convert</button>
+        </p>
+        <p class="form__result">
+          Result: <strong class="js-result">N/A</strong>
+        </p>
+        <p class="footer">
+          *The field with a star (*) symbol must be completed
+        </p>
+        <p class="footer">
+          Currency rates come from the Western Union website as of April 30,
+          2023
+        </p>
+      </fieldset>
     </form>
-</body>
-
+  </body>
 </html>
