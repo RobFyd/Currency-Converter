@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^3.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0"
   }
 }
