@@ -1,4 +1,21 @@
 {
+  const calcDate = () => {
+    const date = new Date();
+    const newDate = date.toLocaleDateString("en-EN", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    });
+
+    document.querySelector(".js-date").innerText = newDate;
+  };
+
+  setInterval(calcDate, 1000);
+
   const currencyFrom = document.querySelector(".js-currencyFrom");
   const amountElement = document.querySelector(".js-amount");
   const formElement = document.querySelector(".js-form");
@@ -40,7 +57,9 @@
   };
 
   const updateResult = (result, currencyToValue) => {
-    resultElement.innerHTML = `${result.toFixed(2)} ${currencyToValue.toUpperCase()}`;
+    resultElement.innerHTML = `${result.toFixed(
+      2
+    )} ${currencyToValue.toUpperCase()}`;
   };
 
   const handleSubmit = (event) => {
