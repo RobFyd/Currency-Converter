@@ -11,7 +11,7 @@
       second: "numeric",
     });
 
-    document.querySelector(".js-date").innerText = newDate;
+    document.querySelector(".date__span").innerText = newDate;
   };
 
   setInterval(calcDate, 1000);
