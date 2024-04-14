@@ -49,4 +49,3 @@ If you want to learn more and test the functionality of my converter, click belo
 let x = "love coding";
 console.log(x);
 ```
-
